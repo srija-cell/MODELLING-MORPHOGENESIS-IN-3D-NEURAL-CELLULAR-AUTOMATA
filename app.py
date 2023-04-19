@@ -34,6 +34,7 @@ clear_output()
 
   # append new extension
 def generate_output(csv_data_file):
+    
     def to_rgba(x):
       return x[..., :4]
 
@@ -116,20 +117,23 @@ def generate_output(csv_data_file):
 
     
     filename=csv_data_file.name
+    print(filename)
     match = re.search(r"(\d+)x(\d+)x(\d+)", filename)
 
     dimention = [int(match.group(1)), int(match.group(2)), int(match.group(3))]
     print(dimention)
         #print(dimensions)  # Output: [29, 10, 31]
-    path = "/home/srija/Cellular_automata/gnca_/flagged/output/torus_19x6x19ngzgxu8o.csv"
+    # path = "/home/srija/Cellular_automata/gnca_/flagged/output/torus_19x6x19ngzgxu8o.csv"
+    # path = csv_data_file.name
+    with open(filename, 'r') as f:
+      reader = csv.reader(f)
+      data = list(reader)
 
-    with open(path, 'r') as f:
-        reader = csv.reader(f)
-        data = list(reader)
+    print(np.shape(data))
+
     SIZE_X=dimention[0]
     SIZE_Y=dimention[1]
     SIZE_Z=dimention[2]
-    print(np.shape(data))
     numpy_array = np.array(data)
     numpy_array = np.array(data[1:])
     arr=numpy_array[...,:3].astype(float)
