@@ -13,14 +13,10 @@ import tensorflow as tf
 from IPython.display import Image, HTML, clear_output
 import tqdm
 import os
-
-
 import csv
 import numpy as np
 from IPython.display import Image, HTML, clear_output
 import matplotlib.pyplot as plt
-
-import tensorflow as tf
 from tensorflow import keras
 from keras.layers import Conv3D
 from keras.models import Sequential, load_model
