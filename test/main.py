@@ -45,9 +45,6 @@ def test_seed():
 
 
 #testing for loss function
-  # Define the mean squared error loss function
-y_true = np.array([1, 2, 3, 4])
-y_pred = np.array([2, 3, 4, 5])
 def create_mse_loss():
     """Creates a mean squared error loss function"""
     return tf.keras.losses.MeanSquaredError()
