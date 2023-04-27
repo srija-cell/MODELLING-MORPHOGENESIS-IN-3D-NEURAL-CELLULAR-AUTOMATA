@@ -1,9 +1,10 @@
 venv/
 imgs/
+img/
 flagged/
 srija_nca3d.py/
 try.py/
-
+final_defense.py/
 __pycache__
 
 __pycache__/
